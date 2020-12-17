@@ -22,7 +22,7 @@ export class BasicDateRangePickerComponent implements OnInit {
   }
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    this.events.push(`${type}: ${event.value}`);
+    this.events.push(`${type}: ${event.value?.toISOString()}`);
   }
 
 }
